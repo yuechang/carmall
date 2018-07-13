@@ -36,7 +36,7 @@ import java.util.List;
  * @version 1.0
  * @className: CarEntityService
  * @description: 车辆信息服务接口
- * @date 2018年07月12日 18:08
+ * @date 2018年07月13日 15:10
  */
 public interface CarEntityService {
 

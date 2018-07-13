@@ -13,6 +13,7 @@
     <module>carmall-service</module>
     <module>carmall-admin-web</module>
     <module>carmall-web</module>
+    <module>carmall-service-api</module>
   </modules>
 
   <name>carmall</name>

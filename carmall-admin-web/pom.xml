@@ -24,6 +24,11 @@
     <dependencies>
         <dependency>
             <groupId>com.yc.carmall</groupId>
+            <artifactId>carmall-service-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yc.carmall</groupId>
             <artifactId>carmall-service</artifactId>
             <version>1.0</version>
         </dependency>
