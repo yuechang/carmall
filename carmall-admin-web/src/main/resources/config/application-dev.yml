@@ -1,0 +1,22 @@
+spring:
+
+  datasource:
+    username: yuech
+    password: Yue_Chang5
+    url: jdbc:mysql://serverhost:3306/carmall?useSSL=false&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    # Hikari数据源配置
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # 将默认的存储引擎切换为InnoDB
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  devtools:
+    restart:
+      poll-interval: 2s
