@@ -1,5 +1,5 @@
 spring:
-
+  # 数据库配置
   datasource:
     username: yuech
     password: Yue_Chang5
@@ -9,14 +9,23 @@ spring:
     hikari:
       maximum-pool-size: 20
       minimum-idle: 5
-
+  # jpa配置
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     # 将默认的存储引擎切换为InnoDB
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  # 热部署配置
+  #devtools:
+    #restart:
+      #poll-interval: 2s
+  # thymeleaf配置
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    # 开发是关闭缓存，不热没法看到实时页面
+    cache: false
 
-  devtools:
-    restart:
-      poll-interval: 2s
