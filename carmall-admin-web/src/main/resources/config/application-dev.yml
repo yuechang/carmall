@@ -28,4 +28,6 @@ spring:
       content-type: text/html
     # 开发是关闭缓存，不热没法看到实时页面
     cache: false
-
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
