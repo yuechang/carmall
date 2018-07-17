@@ -17,6 +17,15 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+/*
+
+
+    @Bean
+    public LocaleChangeInterceptor localeChangeInterceptor() {
+        LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
+        lci.setParamName(BaseConstants.LANG_PARAMETER_NAME);
+        return lci;
+    }
 
     @Bean
     public LocaleResolver localeResolver() {
@@ -31,8 +40,11 @@ public class Application {
         return new WebMvcConfigurer() {
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new LocaleChangeInterceptor()).addPathPatterns("/**");
+            registry.addInterceptor(localeChangeInterceptor()).addPathPatterns("/**");
+
             }
         };
     }
+*/
+
 }

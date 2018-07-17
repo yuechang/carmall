@@ -6,9 +6,7 @@ package com.yc.carmall.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Yue Chang
@@ -38,6 +36,12 @@ public class UserController {
         map.addAttribute("host", "https://yuech.net");
         // return模板文件的名称，对应src/main/resources/templates/index.html
         return "index";
+    }
+
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @ResponseBody
+    public String test() {
+        return "Hello !";
     }
 }
 
