@@ -36,7 +36,5 @@ system:
   #angSet: [en,en_US,zh,zh_CN]
   langList:
     - en
-    - en_US
-    - zh
-    - zh_CN
+    - cn
 
