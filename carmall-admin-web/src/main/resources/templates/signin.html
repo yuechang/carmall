@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" >
     <link rel="stylesheet" href="/css/signin.css" >
     <link rel="stylesheet" href="/css/starter-template.css" >
-
+    <link rel="stylesheet" href="/css/floating-labels.css" >
     <link rel="stylesheet" href="/css/sticky-footer-navbar.css" >
 
     <title th:text="#{sign.in.title}"></title>
@@ -25,16 +25,35 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 
-    <form class="form-signin" action="/user/signin">
-        <h1 class="h3 mb-3 font-weight-normal" th:text="#{sign.in.title}"></h1>
+    <form class="form-signin" action="/user/signin" method="post">
+        <div class="text-center mb-4">
+            <!--
+            图标
+            <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            -->
+            <h1 class="h3 mb-3 font-weight-normal" th:text="#{sign.in.title}"></h1>
 
-        <label for="inputEmail" class="sr-only" th:text="#{sign.in.username}"></label>
-        <input type="email" id="inputEmail" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+            <div th:if="${message}" id="message" class="alert alert-warning">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong th:if="${message}" th:text="${message}"></strong>
+            </div>
 
-        <label for="inputPassword" class="sr-only" th:text="#{sign.in.password}"></label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
+            <div th:unless="${message}" id="empty" class="alert" >
+                <strong>&nbsp;&nbsp;</strong>&nbsp;&nbsp;
+            </div>
+        </div>
 
-        <div class="checkbox mb-3" style="text-align: left;">
+        <div class="form-label-group">
+            <input type="email" id="inputEmail" name="username" class="form-control" th:placeholder="#{sign.in.username}" required autofocus>
+            <label for="inputEmail" th:text="#{sign.in.username}"></label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" name="password" class="form-control" th:placeholder="#{sign.in.password}" required>
+            <label for="inputPassword" th:text="#{sign.in.password}"></label>
+        </div>
+
+        <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="rememberMe" th:text="#{sign.in.remember.me}">
             </label>
