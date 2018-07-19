@@ -1,67 +1,239 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>#{sign.up.title}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="css/morris.css" type="text/css"/>
-<!-- Graph CSS -->
-<link href="css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="css/jquery-ui.css"> 
-<!-- jQuery -->
-<script src="js/jquery-2.1.4.min.js"></script>
-<!-- //jQuery -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- lined-icons -->
-<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-<!-- //lined-icons -->
-</head> 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="/css/starter-template.css" >
+    <link rel="stylesheet" href="/css/sticky-footer-navbar.css" >
+    <link rel="stylesheet" href="/css/floating-labels.css" >
+
+    <title th:text="#{sign.up.title}"></title>
+</head>
 <body>
-	<div class="main-wthree">
-	<div class="container">
-	<div class="sin-w3-agile">
-		<h2>Sign Up</h2>
-		<form action="#" method="post">
-			<div class="username">
-				<span class="username">Username:</span>
-				<input type="text" name="name" class="name" placeholder="" required="">
-				<div class="clearfix"></div>
-			</div>
-			<div class="username">
-				<span class="username">Email:</span>
-				<input type="text" name="email" class="name" placeholder="" required="">
-				<div class="clearfix"></div>
-			</div>
-			<div class="password-agileits">
-				<span class="username">Password:</span>
-				<input type="password" name="password" class="password" placeholder="" required="">
-				<div class="clearfix"></div>
-			</div>
-			<div class="password-agileits">
-				<span class="username">Confirm Password:</span>
-				<input type="password" name="password" class="password" placeholder="" required="">
-				<div class="clearfix"></div>
-			</div>
-			<div class="login-w3">
-					<input type="submit" class="login" value="Sign Up">
-			</div>
-			<div class="clearfix"></div>
-		</form>
-		<div class="back">
-			<a href="index.html">Back to home</a>
-		</div>
-		<div class="footer">
-			<div th:include="footer :: copyright"></div>
-		</div>
-	</div>
-	</div>
-	</div>
+
+<header>
+    <!-- Fixed navbar -->
+    <div class="container" th:include="header :: navbar">
+    </div>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+    <input type="hidden" th:value="#{sign.up.username.not.be.empty}" id="usernameNotBeEmpty">
+    <input type="hidden" th:value="#{sign.up.username.already.exists}" id="usernameAlreadyExists">
+    <input type="hidden" th:value="#{sign.up.username.available}" id="usernameAvailable">
+    <input type="hidden" th:value="#{sign.up.password.inconsistent}" id="passwordInconsistent">
+    <input type="hidden" th:value="#{sign.up.password.not.be.empty}" id="passwordNotBeEmpty">
+    <input type="hidden" th:value="#{sign.up.password.is.correct}" id="passwordCorrect">
+
+    <form class="form-signin" action="/user/signup" method="post" id="signUpForm">
+        <div class="text-center mb-4">
+            <!--
+            图标
+            <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            -->
+            <h1 class="h3 mb-3 font-weight-normal" th:text="#{sign.up.title}"></h1>
+        </div>
+
+        <div class="form-label-group">
+            <input type="email"
+                   id="inputEmail"
+                   name="username"
+                   class="form-control"
+                   th:placeholder="#{sign.in.username}"
+                   onblur="checkUsername(this.value)"
+                   onfocus="clearUsernameMessage()"
+                   required>
+            <label for="inputEmail" th:text="#{sign.in.username}"></label>
+            <div id="emailValidMessage">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password"
+                   id="inputPassword"
+                   name="password"
+                   class="form-control"
+                   th:placeholder="#{sign.in.password}"
+                   onblur="checkPassword()"
+                   onfocus="clearPasswordMessage()"
+                   required>
+            <label for="inputPassword" th:text="#{sign.in.password}"></label>
+            <div id="passwordValidMessage">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password"
+                   id="confirmPassword"
+                   name="confirmPassword"
+                   class="form-control"
+                   th:placeholder="#{sign.up.confirm.password}"
+                   onblur="checkPassword()"
+                   onfocus="clearPasswordMessage()"
+                   required>
+            <label for="confirmPassword" th:text="#{sign.up.confirm.password}"></label>
+            <div id="confirmPasswordValidMessage">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block"
+                type="button"
+                th:text="#{sign.up.title}"
+                onclick="submitSingUp()">
+        </button>
+    </form>
+
+
+</main>
+
+<footer class="footer">
+    <div class="container" th:include="footer :: copyright">
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="/js/jquery-3.3.1.slim.min.js" ></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery.md5.js"></script>
+<!--<script src="/js/popper.min.js" ></script>-->
+<script src="/js/tether.min.js" ></script>
+<script src="/js/bootstrap.min.js" ></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+
+    function checkUsername() {
+
+        var usernameValue = $("#inputEmail").val();
+        var result = checkUsernameNotEmpty(usernameValue);
+
+        if (!result) {
+            return result;
+        }
+
+        $.ajax({
+            url: "/user/checkusername",
+            data: { username: usernameValue },
+            success: function (data){
+
+                result = data;
+                var usernameVar = $("#inputEmail");
+                if (true == data) {
+                    usernameVar.addClass("is-valid");
+                    var messageVar = $("#emailValidMessage");
+                    messageVar.addClass("valid-feedback");
+                    messageVar.html($("#usernameAvailable").val());
+
+                } else if (false == data) {
+
+                    usernameVar.addClass("is-invalid");
+                    var messageVar = $("#emailValidMessage");
+                    messageVar.addClass("invalid-feedback");
+                    messageVar.html($("#usernameAlreadyExists").val());
+                }
+            },
+            error: function (data){
+                alert(data);
+            }
+        });
+        return result;
+    }
+
+    function checkUsernameNotEmpty(username) {
+
+        if ("" == username) {
+
+            var usernameVar = $("#inputEmail");
+            usernameVar.addClass("is-invalid");
+
+            var message = $("#usernameNotBeEmpty").val();
+            var messageVar = $("#emailValidMessage");
+            messageVar.addClass("invalid-feedback");
+            messageVar.html(message);
+            return false;
+        }
+        return true;
+    }
+
+    function checkPassword() {
+
+        var confirmPasswordVar = $("#confirmPassword");
+        var confirmPasswordValidMessageVar = $("#confirmPasswordValidMessage");
+
+
+        var password = $("#inputPassword").val();
+        var confirmPassword = confirmPasswordVar.val();
+
+        if ("" == password || "" == confirmPassword || password != confirmPassword) {
+
+            confirmPasswordVar.addClass("is-invalid");
+            confirmPasswordValidMessageVar.addClass("invalid-feedback");
+
+            if ("" == password && "" == confirmPassword) {
+                confirmPasswordValidMessageVar.html($("#passwordNotBeEmpty").val());
+            } else {
+                confirmPasswordValidMessageVar.html($("#passwordInconsistent").val());
+            }
+            return false;
+        }
+        confirmPasswordVar.addClass("is-valid");
+        confirmPasswordValidMessageVar.addClass("valid-feedback");
+        confirmPasswordValidMessageVar.html($("#passwordCorrect").val());
+        return true;
+    }
+
+    function clearPasswordMessage(){
+
+        var confirmPasswordVar = $("#confirmPassword");
+
+        confirmPasswordVar.removeClass("is-invalid");
+        confirmPasswordVar.removeClass("is-valid");
+
+        var messageVar = $("#confirmPasswordValidMessage");
+        messageVar.html("&nbsp;&nbsp;&nbsp;&nbsp;");
+        messageVar.removeClass("valid-feedback");
+        messageVar.removeClass("invalid-feedback");
+    }
+
+    function clearUsernameMessage(){
+
+        var usernameVar = $("#inputEmail");
+        usernameVar.removeClass("is-invalid");
+        usernameVar.removeClass("is-valid");
+
+        var messageVar = $("#emailValidMessage");
+        messageVar.html("&nbsp;&nbsp;&nbsp;&nbsp;");
+        messageVar.removeClass("valid-feedback");
+        messageVar.removeClass("invalid-feedback");
+    }
+
+    function submitSingUp(){
+
+        // 检查用户名
+        if (!checkUsername()) {
+            return;
+        }
+
+        // 检查密码
+        if (!checkPassword()) {
+            return;
+        }
+
+        // md5密码加密
+        $("#inputPassword").val($.md5($("#inputPassword").val()));
+        $("#confirmPassword").val($.md5($("#confirmPassword").val()));
+
+        $("#signUpForm").submit();
+    }
+</script>
 </body>
 </html>
