@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="/css/signin.css" >
+    <link rel="stylesheet" href="/css/starter-template.css" >
+    <link rel="stylesheet" href="/css/floating-labels.css" >
+    <link rel="stylesheet" href="/css/sticky-footer-navbar.css" >
+
+    <title th:text="#{sign.in.title}"></title>
+</head>
+<body>
+
+<header>
+    <!-- Fixed navbar -->
+    <div class="container" th:include="header :: navbar">
+    </div>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+
+    <div class="text-center mb-4" th:switch="${code}">
+        <!--
+        图标
+        <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        -->
+
+        <div th:case="200" class="alert alert-success" role="alert">
+            <h4 class="alert-heading" th:text="#{sign.up.success}"></h4>
+
+            <hr>
+            <a class="mb-0" href="/user/signin" th:text="#{sign.in.title}"></a>
+        </div>
+
+        <div th:case="500" class="alert alert-danger" role="alert">
+            <h4 class="alert-heading" th:text="#{sign.up.failure}"></h4>
+            <p th:text="${data}"></p>
+            <hr>
+            <a class="mb-0" href="/user/signup" th:text="#{sign.up.title}"></a>
+        </div>
+
+        <div th:case="*" class="alert alert-danger" role="alert">
+            <h4 class="alert-heading" th:text="#{sign.up.failure}"></h4>
+            <p th:text="${data}"></p>
+            <hr>
+            <a class="mb-0" href="/user/signup" th:text="#{sign.up.title}"></a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="container" th:include="footer :: copyright">
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="/js/jquery-3.3.1.slim.min.js" ></script>
+<!--<script src="/js/popper.min.js" ></script>-->
+<script src="/js/tether.min.js" ></script>
+<script src="/js/bootstrap.min.js" ></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
