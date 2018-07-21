@@ -4,6 +4,8 @@
  */
 package com.yc.carmall.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -12,6 +14,8 @@ import java.util.Date;
  * @Description: 用户表
  * @date 2018/7/14 21:46
  */
+@Entity
+@Table(name = "T_USER")
 public class UserEntity extends BaseEntity {
 
     private String username;

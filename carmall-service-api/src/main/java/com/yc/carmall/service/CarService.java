@@ -34,21 +34,21 @@ import java.util.List;
 /**
  * @author Yue Chang
  * @version 1.0
- * @className: CarEntityService
+ * @className: CarService
  * @description: 车辆信息服务接口
  * @date 2018年07月13日 15:10
  */
-public interface CarEntityService {
+public interface CarService {
 
     CarEntity addCarSource(CarEntity carSource);
 
     CarEntity updateCarSource(String id, CarEntity carSource);
 
-    long delCarSources(String[] carSourcesId);
+    long delCarSource(String[] carSourcesId);
 
     Page<CarEntity> carSourcePage(Pageable pageable);
 
     CarEntity updateStatus(String id, int status);
 
-    List<CarEntity> carSources();
+    List<CarEntity> findAllCarSource();
 }

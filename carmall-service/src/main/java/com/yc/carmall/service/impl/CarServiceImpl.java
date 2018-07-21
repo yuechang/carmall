@@ -26,8 +26,8 @@
 package com.yc.carmall.service.impl;
 
 import com.yc.carmall.entity.CarEntity;
-import com.yc.carmall.repository.CarEntityRepository;
-import com.yc.carmall.service.CarEntityService;
+import com.yc.carmall.repository.CarRepository;
+import com.yc.carmall.service.CarService;
 import com.yc.carmall.util.UpdateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -41,50 +41,49 @@ import java.util.List;
  * @author Yue Chang
  * @version 1.0
  * @className: CarEntityServiceImpl
- * @description: @TODO
+ * @description: 车辆信息服务实现类
  * @date 2018年07月12日 18:18
  */
 @Transactional
 @Service
-public class CarEntityServiceImpl implements CarEntityService {
+public class CarServiceImpl implements CarService {
 
 
     @Autowired
-    private CarEntityRepository carEntityRepository;
+    private CarRepository carRepository;
 
     @Override
     public CarEntity addCarSource(CarEntity carSource) {
-        return carEntityRepository.save(carSource);
+        return carRepository.save(carSource);
     }
 
     @Override
     public CarEntity updateCarSource(String id, CarEntity carSource) {
 
-        CarEntity carEntityZh = carEntityRepository.findById(id).get();
-        UpdateUtil.copyProperties(carSource, carEntityZh);
-        return carEntityRepository.save(carEntityZh);
+        CarEntity targetEntity = carRepository.findById(id).get();
+        UpdateUtil.copyProperties(carSource, targetEntity);
+        return carRepository.save(targetEntity);
     }
 
     @Override
-    public long delCarSources(String[] ids) {
+    public long delCarSource(String[] ids) {
 
-        carEntityRepository.deleteByIds(ids);
-        return 0;
+        return carRepository.deleteByIds(ids);
     }
 
     @Override
     public Page<CarEntity> carSourcePage(Pageable pageable) {
-        return carEntityRepository.findAll(pageable);
+        return carRepository.findAll(pageable);
     }
 
     @Override
     public CarEntity updateStatus(String id, int status) {
-        carEntityRepository.updateStatusById(status, id);
+        carRepository.updateStatusById(status, id);
         return null;
     }
 
     @Override
-    public List<CarEntity> carSources() {
-        return carEntityRepository.findAll();
+    public List<CarEntity> findAllCarSource() {
+        return carRepository.findAll();
     }
 }

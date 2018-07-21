@@ -39,11 +39,11 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Yue Chang
  * @version 1.0
  * @className: CarEntityRepository
- * @description: @TODO
+ * @description: 车辆信息数据库查询接口
  * @date 2018年07月12日 17:05
  */
 @Repository
-public interface CarEntityRepository extends JpaRepository<CarEntity,String> {
+public interface CarRepository extends JpaRepository<CarEntity,String> {
 
     @Override
     @EntityGraph("CarEntity.find")
@@ -57,6 +57,6 @@ public interface CarEntityRepository extends JpaRepository<CarEntity,String> {
     @Modifying//更新查询
     @Transactional//开启事务
     @Query("update CarEntity c set c.isDelete = 1 where c.id in ?1")
-    void deleteByIds(String[] ids);
+    int deleteByIds(String[] ids);
 
 }
