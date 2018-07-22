@@ -1,0 +1,612 @@
+2018-07-17 18:05:53.124 [main] INFO  com.yc.carmall.Application -
+                Starting Application on HP with PID 24652 (D:\idea-workspaces\carmall\carmall-admin-web\target\classes started by yuechang in D:\idea-workspaces\carmall)
+2018-07-17 18:05:53.127 [main] INFO  com.yc.carmall.Application -
+                The following profiles are active: dev
+2018-07-17 18:05:53.195 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext -
+                Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@62452cc9: startup date [Tue Jul 17 18:05:53 CST 2018]; root of context hierarchy
+2018-07-17 18:05:54.019 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:05:54.091 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:05:54.108 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.CarRepository.
+2018-07-17 18:05:54.109 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.UserRepository.
+2018-07-17 18:05:54.607 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$21f532cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-17 18:05:54.939 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8080 (http)
+2018-07-17 18:05:54.954 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:05:54.964 [main] INFO  org.apache.catalina.core.StandardService -
+                Starting service [Tomcat]
+2018-07-17 18:05:54.965 [main] INFO  org.apache.catalina.core.StandardEngine -
+                Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-17 18:05:54.969 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;D:\ljj\apache-maven-3.3.9\apache-maven-3.3.9\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\Program Files\TortoiseGit\bin;%MAVEN_HOME%\bin;D:\toolsInstall\svn\bin ;D:\toolsInstall\zookeeper\zookeeper-3.4.10/bin; D:\toolsInstall\zookeeper\zookeeper-3.4.10/conf;C:\Program Files\node\;.]
+2018-07-17 18:05:55.082 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2018-07-17 18:05:55.083 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1888 ms
+2018-07-17 18:05:55.233 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean -
+                Servlet dispatcherServlet mapped to [/]
+2018-07-17 18:05:55.240 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-17 18:05:55.241 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-17 18:05:55.241 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-17 18:05:55.241 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-17 18:05:55.407 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2018-07-17 18:05:56.222 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2018-07-17 18:05:56.261 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:05:56.271 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-17 18:05:56.334 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.2.17.Final}
+2018-07-17 18:05:56.336 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2018-07-17 18:05:56.374 [main] INFO  org.hibernate.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-17 18:05:56.496 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-07-17 18:05:57.558 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:05:57.878 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator -
+                HHH000397: Using ASTQueryTranslatorFactory
+2018-07-17 18:05:58.177 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:05:58.453 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter -
+                Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@62452cc9: startup date [Tue Jul 17 18:05:53 CST 2018]; root of context hierarchy
+2018-07-17 18:05:58.524 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:05:58.525 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/helloWorld]}" onto public java.lang.String com.yc.carmall.controller.CarController.helloWorld()
+2018-07-17 18:05:58.525 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/addCarEntity],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.CarController.addCarEntity(com.yc.carmall.entity.CarEntity)
+2018-07-17 18:05:58.525 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/updateCarEntityStatus],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.updateCarEntityStatus(java.lang.String,int)
+2018-07-17 18:05:58.527 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/index],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:05:58.527 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/test],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.test()
+2018-07-17 18:05:58.527 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)
+2018-07-17 18:05:58.527 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(org.springframework.ui.ModelMap)
+2018-07-17 18:05:58.527 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signup],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signup(org.springframework.ui.ModelMap)
+2018-07-17 18:05:58.529 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-17 18:05:58.530 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-17 18:05:58.562 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:05:58.562 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:05:58.686 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping -
+                Adding welcome page template: index
+2018-07-17 18:05:59.293 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Registering beans for JMX exposure on startup
+2018-07-17 18:05:59.295 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-07-17 18:05:59.302 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-07-17 18:05:59.313 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:05:59.324 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+                Using a shared selector for servlet write/read
+2018-07-17 18:05:59.341 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8080 (http) with context path ''
+2018-07-17 18:05:59.344 [main] INFO  com.yc.carmall.Application -
+                Started Application in 7.234 seconds (JVM running for 8.201)
+2018-07-17 18:06:15.807 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-17 18:06:15.807 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-17 18:06:15.825 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-07-17 18:06:15.847 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/login,targetUri: /user/login
+2018-07-17 18:06:17.157 [http-nio-8080-exec-3] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/login,targetUri: /user/login
+2018-07-17 18:06:33.252 [http-nio-8080-exec-5] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:06:43.600 [http-nio-8080-exec-2] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:26:00.459 [main] INFO  com.yc.carmall.Application -
+                Starting Application on HP with PID 33376 (D:\idea-workspaces\carmall\carmall-admin-web\target\classes started by yuechang in D:\idea-workspaces\carmall)
+2018-07-17 18:26:00.462 [main] INFO  com.yc.carmall.Application -
+                The following profiles are active: dev
+2018-07-17 18:26:00.496 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext -
+                Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2c7b5824: startup date [Tue Jul 17 18:26:00 CST 2018]; root of context hierarchy
+2018-07-17 18:26:01.043 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:26:01.097 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:26:01.112 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.CarRepository.
+2018-07-17 18:26:01.114 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.UserRepository.
+2018-07-17 18:26:01.515 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c872c74f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-17 18:26:01.859 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8080 (http)
+2018-07-17 18:26:01.871 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:26:01.882 [main] INFO  org.apache.catalina.core.StandardService -
+                Starting service [Tomcat]
+2018-07-17 18:26:01.882 [main] INFO  org.apache.catalina.core.StandardEngine -
+                Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-17 18:26:01.886 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;D:\ljj\apache-maven-3.3.9\apache-maven-3.3.9\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\Program Files\TortoiseGit\bin;%MAVEN_HOME%\bin;D:\toolsInstall\svn\bin ;D:\toolsInstall\zookeeper\zookeeper-3.4.10/bin; D:\toolsInstall\zookeeper\zookeeper-3.4.10/conf;C:\Program Files\node\;.]
+2018-07-17 18:26:01.977 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2018-07-17 18:26:01.978 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1482 ms
+2018-07-17 18:26:02.106 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean -
+                Servlet dispatcherServlet mapped to [/]
+2018-07-17 18:26:02.111 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-17 18:26:02.112 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-17 18:26:02.112 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-17 18:26:02.112 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-17 18:26:02.270 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2018-07-17 18:26:02.634 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2018-07-17 18:26:02.671 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:26:02.687 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-17 18:26:02.763 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.2.17.Final}
+2018-07-17 18:26:02.765 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2018-07-17 18:26:02.811 [main] INFO  org.hibernate.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-17 18:26:02.936 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-07-17 18:26:03.615 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:26:03.915 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator -
+                HHH000397: Using ASTQueryTranslatorFactory
+2018-07-17 18:26:04.187 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:26:04.454 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter -
+                Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2c7b5824: startup date [Tue Jul 17 18:26:00 CST 2018]; root of context hierarchy
+2018-07-17 18:26:04.518 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:26:04.519 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/updateCarEntityStatus],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.updateCarEntityStatus(java.lang.String,int)
+2018-07-17 18:26:04.519 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/addCarEntity],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.CarController.addCarEntity(com.yc.carmall.entity.CarEntity)
+2018-07-17 18:26:04.520 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/helloWorld]}" onto public java.lang.String com.yc.carmall.controller.CarController.helloWorld()
+2018-07-17 18:26:04.521 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/index],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:26:04.521 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/test],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.test()
+2018-07-17 18:26:04.521 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)
+2018-07-17 18:26:04.522 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(org.springframework.ui.ModelMap)
+2018-07-17 18:26:04.522 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signup],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signup(org.springframework.ui.ModelMap)
+2018-07-17 18:26:04.524 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-17 18:26:04.525 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-17 18:26:04.561 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:26:04.561 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:26:04.684 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping -
+                Adding welcome page template: index
+2018-07-17 18:26:05.229 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Registering beans for JMX exposure on startup
+2018-07-17 18:26:05.230 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-07-17 18:26:05.237 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-07-17 18:26:05.248 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:26:05.257 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+                Using a shared selector for servlet write/read
+2018-07-17 18:26:05.272 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8080 (http) with context path ''
+2018-07-17 18:26:05.275 [main] INFO  com.yc.carmall.Application -
+                Started Application in 5.566 seconds (JVM running for 6.872)
+2018-07-17 18:26:15.228 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-17 18:26:15.228 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-17 18:26:15.246 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-07-17 18:26:15.272 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:26:18.927 [http-nio-8080-exec-4] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:27:13.555 [main] INFO  com.yc.carmall.Application -
+                Starting Application on HP with PID 30128 (D:\idea-workspaces\carmall\carmall-admin-web\target\classes started by yuechang in D:\idea-workspaces\carmall)
+2018-07-17 18:27:13.559 [main] INFO  com.yc.carmall.Application -
+                The following profiles are active: dev
+2018-07-17 18:27:13.661 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext -
+                Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@349c1daf: startup date [Tue Jul 17 18:27:13 CST 2018]; root of context hierarchy
+2018-07-17 18:27:14.272 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:27:14.336 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:27:14.355 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.CarRepository.
+2018-07-17 18:27:14.357 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.UserRepository.
+2018-07-17 18:27:14.790 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e6f2a6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-17 18:27:15.096 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8080 (http)
+2018-07-17 18:27:15.109 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:27:15.121 [main] INFO  org.apache.catalina.core.StandardService -
+                Starting service [Tomcat]
+2018-07-17 18:27:15.121 [main] INFO  org.apache.catalina.core.StandardEngine -
+                Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-17 18:27:15.125 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;D:\ljj\apache-maven-3.3.9\apache-maven-3.3.9\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\Program Files\TortoiseGit\bin;%MAVEN_HOME%\bin;D:\toolsInstall\svn\bin ;D:\toolsInstall\zookeeper\zookeeper-3.4.10/bin; D:\toolsInstall\zookeeper\zookeeper-3.4.10/conf;C:\Program Files\node\;.]
+2018-07-17 18:27:15.236 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2018-07-17 18:27:15.236 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1576 ms
+2018-07-17 18:27:15.374 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean -
+                Servlet dispatcherServlet mapped to [/]
+2018-07-17 18:27:15.379 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-17 18:27:15.380 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-17 18:27:15.380 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-17 18:27:15.380 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-17 18:27:15.539 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2018-07-17 18:27:15.904 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2018-07-17 18:27:15.942 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:27:15.953 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-17 18:27:16.026 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.2.17.Final}
+2018-07-17 18:27:16.027 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2018-07-17 18:27:16.073 [main] INFO  org.hibernate.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-17 18:27:16.230 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-07-17 18:27:16.862 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:27:17.166 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator -
+                HHH000397: Using ASTQueryTranslatorFactory
+2018-07-17 18:27:17.469 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:27:17.763 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter -
+                Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@349c1daf: startup date [Tue Jul 17 18:27:13 CST 2018]; root of context hierarchy
+2018-07-17 18:27:17.838 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:27:17.839 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/updateCarEntityStatus],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.updateCarEntityStatus(java.lang.String,int)
+2018-07-17 18:27:17.839 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/helloWorld]}" onto public java.lang.String com.yc.carmall.controller.CarController.helloWorld()
+2018-07-17 18:27:17.839 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/addCarEntity],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.CarController.addCarEntity(com.yc.carmall.entity.CarEntity)
+2018-07-17 18:27:17.840 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/index],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:27:17.840 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/test],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.test()
+2018-07-17 18:27:17.841 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)
+2018-07-17 18:27:17.841 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(org.springframework.ui.ModelMap)
+2018-07-17 18:27:17.841 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signup],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signup(org.springframework.ui.ModelMap)
+2018-07-17 18:27:17.843 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-17 18:27:17.843 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-17 18:27:17.878 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:27:17.878 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:27:18.005 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping -
+                Adding welcome page template: index
+2018-07-17 18:27:18.636 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Registering beans for JMX exposure on startup
+2018-07-17 18:27:18.638 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-07-17 18:27:18.645 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-07-17 18:27:18.660 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:27:18.670 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+                Using a shared selector for servlet write/read
+2018-07-17 18:27:18.686 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8080 (http) with context path ''
+2018-07-17 18:27:18.689 [main] INFO  com.yc.carmall.Application -
+                Started Application in 6.017 seconds (JVM running for 7.109)
+2018-07-17 18:27:48.050 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-17 18:27:48.050 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-17 18:27:48.070 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-07-17 18:27:48.095 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:30:50.997 [http-nio-8080-exec-7] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/en/user/signin,targetUri: /user/signin
+2018-07-17 18:30:56.299 [http-nio-8080-exec-9] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:31:04.635 [http-nio-8080-exec-4] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:31:54.389 [main] INFO  com.yc.carmall.Application -
+                Starting Application on HP with PID 36172 (D:\idea-workspaces\carmall\carmall-admin-web\target\classes started by yuechang in D:\idea-workspaces\carmall)
+2018-07-17 18:31:54.393 [main] INFO  com.yc.carmall.Application -
+                The following profiles are active: dev
+2018-07-17 18:31:54.453 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext -
+                Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c3b9394: startup date [Tue Jul 17 18:31:54 CST 2018]; root of context hierarchy
+2018-07-17 18:31:55.131 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:31:55.192 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:31:55.209 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.CarRepository.
+2018-07-17 18:31:55.210 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.UserRepository.
+2018-07-17 18:31:55.637 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$279bbd62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-17 18:31:55.991 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8080 (http)
+2018-07-17 18:31:56.005 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:31:56.015 [main] INFO  org.apache.catalina.core.StandardService -
+                Starting service [Tomcat]
+2018-07-17 18:31:56.015 [main] INFO  org.apache.catalina.core.StandardEngine -
+                Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-17 18:31:56.020 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;D:\ljj\apache-maven-3.3.9\apache-maven-3.3.9\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\Program Files\TortoiseGit\bin;%MAVEN_HOME%\bin;D:\toolsInstall\svn\bin ;D:\toolsInstall\zookeeper\zookeeper-3.4.10/bin; D:\toolsInstall\zookeeper\zookeeper-3.4.10/conf;C:\Program Files\node\;.]
+2018-07-17 18:31:56.112 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2018-07-17 18:31:56.112 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1659 ms
+2018-07-17 18:31:56.248 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean -
+                Servlet dispatcherServlet mapped to [/]
+2018-07-17 18:31:56.254 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-17 18:31:56.254 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-17 18:31:56.254 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-17 18:31:56.255 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-17 18:31:56.418 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2018-07-17 18:31:56.738 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2018-07-17 18:31:56.780 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:31:56.791 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-17 18:31:56.867 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.2.17.Final}
+2018-07-17 18:31:56.868 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2018-07-17 18:31:56.908 [main] INFO  org.hibernate.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-17 18:31:57.025 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-07-17 18:31:57.683 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:31:57.997 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator -
+                HHH000397: Using ASTQueryTranslatorFactory
+2018-07-17 18:31:58.269 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:31:58.561 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter -
+                Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c3b9394: startup date [Tue Jul 17 18:31:54 CST 2018]; root of context hierarchy
+2018-07-17 18:31:58.633 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:31:58.634 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/updateCarEntityStatus],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.updateCarEntityStatus(java.lang.String,int)
+2018-07-17 18:31:58.635 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/addCarEntity],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.CarController.addCarEntity(com.yc.carmall.entity.CarEntity)
+2018-07-17 18:31:58.635 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/helloWorld]}" onto public java.lang.String com.yc.carmall.controller.CarController.helloWorld()
+2018-07-17 18:31:58.636 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/index],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:31:58.637 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/test],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.test()
+2018-07-17 18:31:58.637 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)
+2018-07-17 18:31:58.637 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(org.springframework.ui.ModelMap)
+2018-07-17 18:31:58.637 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signup],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signup(org.springframework.ui.ModelMap)
+2018-07-17 18:31:58.639 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-17 18:31:58.640 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-17 18:31:58.673 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:31:58.673 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:31:58.794 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping -
+                Adding welcome page template: index
+2018-07-17 18:31:59.394 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Registering beans for JMX exposure on startup
+2018-07-17 18:31:59.395 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-07-17 18:31:59.402 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-07-17 18:31:59.413 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:31:59.423 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+                Using a shared selector for servlet write/read
+2018-07-17 18:31:59.440 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8080 (http) with context path ''
+2018-07-17 18:31:59.443 [main] INFO  com.yc.carmall.Application -
+                Started Application in 5.997 seconds (JVM running for 6.986)
+2018-07-17 18:32:03.376 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-17 18:32:03.376 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-17 18:32:03.393 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-07-17 18:32:03.416 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:32:09.571 [http-nio-8080-exec-4] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:33:23.649 [http-nio-8080-exec-9] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:34:15.154 [main] INFO  com.yc.carmall.Application -
+                Starting Application on HP with PID 29036 (D:\idea-workspaces\carmall\carmall-admin-web\target\classes started by yuechang in D:\idea-workspaces\carmall)
+2018-07-17 18:34:15.174 [main] INFO  com.yc.carmall.Application -
+                The following profiles are active: dev
+2018-07-17 18:34:15.213 [main] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext -
+                Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e7b159b: startup date [Tue Jul 17 18:34:15 CST 2018]; root of context hierarchy
+2018-07-17 18:34:15.819 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:34:15.883 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+                Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-17 18:34:15.900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.CarRepository.
+2018-07-17 18:34:15.901 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport -
+                Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.yc.carmall.repository.UserRepository.
+2018-07-17 18:34:16.336 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ac272d1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-17 18:34:16.621 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 8080 (http)
+2018-07-17 18:34:16.634 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:34:16.648 [main] INFO  org.apache.catalina.core.StandardService -
+                Starting service [Tomcat]
+2018-07-17 18:34:16.649 [main] INFO  org.apache.catalina.core.StandardEngine -
+                Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-17 18:34:16.653 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener -
+                The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;D:\ljj\apache-maven-3.3.9\apache-maven-3.3.9\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\Program Files\TortoiseGit\bin;%MAVEN_HOME%\bin;D:\toolsInstall\svn\bin ;D:\toolsInstall\zookeeper\zookeeper-3.4.10/bin; D:\toolsInstall\zookeeper\zookeeper-3.4.10/conf;C:\Program Files\node\;.]
+2018-07-17 18:34:16.766 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2018-07-17 18:34:16.766 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1553 ms
+2018-07-17 18:34:16.885 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean -
+                Servlet dispatcherServlet mapped to [/]
+2018-07-17 18:34:16.889 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-17 18:34:16.890 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-17 18:34:16.890 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-17 18:34:16.890 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean -
+                Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-17 18:34:17.030 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Starting...
+2018-07-17 18:34:17.403 [main] INFO  com.zaxxer.hikari.HikariDataSource -
+                HikariPool-1 - Start completed.
+2018-07-17 18:34:17.439 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:34:17.450 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -
+                HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-17 18:34:17.546 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate Core {5.2.17.Final}
+2018-07-17 18:34:17.549 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000206: hibernate.properties not found
+2018-07-17 18:34:17.624 [main] INFO  org.hibernate.annotations.common.Version -
+                HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-17 18:34:17.794 [main] INFO  org.hibernate.dialect.Dialect -
+                HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-07-17 18:34:18.526 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+                Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-07-17 18:34:18.857 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator -
+                HHH000397: Using ASTQueryTranslatorFactory
+2018-07-17 18:34:19.169 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:34:19.428 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter -
+                Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e7b159b: startup date [Tue Jul 17 18:34:15 CST 2018]; root of context hierarchy
+2018-07-17 18:34:19.493 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:34:19.494 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/updateCarEntityStatus],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.CarController.updateCarEntityStatus(java.lang.String,int)
+2018-07-17 18:34:19.494 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/addCarEntity],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.CarController.addCarEntity(com.yc.carmall.entity.CarEntity)
+2018-07-17 18:34:19.494 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/helloWorld]}" onto public java.lang.String com.yc.carmall.controller.CarController.helloWorld()
+2018-07-17 18:34:19.495 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/index],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.index(org.springframework.ui.ModelMap)
+2018-07-17 18:34:19.496 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/test],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.test()
+2018-07-17 18:34:19.496 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[POST]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)
+2018-07-17 18:34:19.496 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signin],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signin(org.springframework.ui.ModelMap)
+2018-07-17 18:34:19.496 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/user/signup],methods=[GET]}" onto public java.lang.String com.yc.carmall.controller.UserController.signup(org.springframework.ui.ModelMap)
+2018-07-17 18:34:19.498 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-17 18:34:19.499 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -
+                Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-17 18:34:19.534 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:34:19.534 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping -
+                Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-17 18:34:19.665 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping -
+                Adding welcome page template: index
+2018-07-17 18:34:20.239 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Registering beans for JMX exposure on startup
+2018-07-17 18:34:20.241 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-07-17 18:34:20.247 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter -
+                Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-07-17 18:34:20.258 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2018-07-17 18:34:20.268 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+                Using a shared selector for servlet write/read
+2018-07-17 18:34:20.282 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 8080 (http) with context path ''
+2018-07-17 18:34:20.285 [main] INFO  com.yc.carmall.Application -
+                Started Application in 5.542 seconds (JVM running for 7.283)
+2018-07-17 18:34:26.320 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+                Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-17 18:34:26.321 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-17 18:34:26.339 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+                FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-07-17 18:34:26.364 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:34:37.585 [http-nio-8080-exec-5] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:34:38.613 [http-nio-8080-exec-7] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:35:41.452 [http-nio-8080-exec-3] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:35:46.396 [http-nio-8080-exec-6] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:36:34.680 [http-nio-8080-exec-2] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:36:46.047 [http-nio-8080-exec-5] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin
+2018-07-17 18:38:20.424 [http-nio-8080-exec-1] INFO  com.yc.carmall.interceptor.LanguageInterceptor -
+                请求转发,uri:/zh/user/signin,targetUri: /user/signin

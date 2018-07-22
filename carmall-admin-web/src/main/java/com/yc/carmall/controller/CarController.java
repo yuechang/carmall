@@ -26,7 +26,7 @@
 package com.yc.carmall.controller;
 
 import com.yc.carmall.entity.CarEntity;
-import com.yc.carmall.service.CarEntityService;
+import com.yc.carmall.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -44,7 +44,7 @@ public class CarController {
 
 
     @Autowired
-    private CarEntityService carEntityZhService;
+    private CarService carEntityZhService;
 
 
     @RequestMapping("/helloWorld")
