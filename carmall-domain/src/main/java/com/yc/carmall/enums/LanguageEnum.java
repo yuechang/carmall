@@ -34,7 +34,7 @@ package com.yc.carmall.enums;
  */
 public enum LanguageEnum {
 
-    ZH(1,"zh"),
+    ZH(1,"cn"),
     EN(2,"en");
 
     private int code;
