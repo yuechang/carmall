@@ -27,16 +27,16 @@ package com.yc.carmall.interceptor;
 
 
 import com.yc.carmall.constants.BaseConstants;
-import com.yc.carmall.interceptor.LanguageInterceptor;
+import com.yc.carmall.enums.LanguageEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+
+import java.util.Locale;
 
 /**
  * @author Yue Chang
@@ -58,8 +58,62 @@ public class WebConfiguration implements WebMvcConfigurer {
         cl.setCookieName(BaseConstants.COOKIE_NAME);
         return cl;
     }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(languageInterceptor);
+    }
+/*
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+
+        Locale locale = LocaleContextHolder.getLocale();
+        String language = locale.getLanguage();
+        String country = locale.getCountry();
+        System.out.println(language + "," + country);
+        String vimeName = "index";
+        if (Locale.CHINA.getCountry().equals(country) || Locale.CHINESE.getCountry().equals(country)) {
+            vimeName = LanguageEnum.ZH
+        } else {
+
+        }
+        registry.addViewController("/").setViewName("forward:/cn/user/signup");
+        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+        this.addViewControllers(registry);
+    }
+*/
+
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        /**
+         * 配置路径跳转；将某个路径的请求映射到另外一个路径
+         * 如将所有http://localhost/b/**的请求全部跳转到http://localhost/test上去
+         */
+        //registry.addRedirectViewController("/b/**", "/test");
+
+        /**
+         * 将路径映射到某个名称为指定值的视图上
+         * 访问/c会返回a.html的视图
+         * 一般与ViewResolver结合使用
+         */
+        registry.addViewController("/c").setViewName("a");
+        Locale locale = LocaleContextHolder.getLocale();
+        String country = locale.getCountry();
+        String forwardPrefix = "forward:/";
+        String viewName = "index";
+
+        if (Locale.CHINA.getCountry().equals(country) || Locale.CHINESE.getCountry().equals(country)) {
+            viewName = forwardPrefix.concat(LanguageEnum.ZH.getLang()).concat("/").concat(viewName);
+        } else {
+            viewName = forwardPrefix.concat(LanguageEnum.EN.getLang()).concat("/").concat(viewName);
+        }
+        registry.addViewController("/").setViewName(viewName);
+        /**
+         * 指定某个请求的状态码，而不返回任何的内容
+         * 如下面将/badRequest请求返回状态码为400，而没有返回其它内容
+         */
+        //registry.addStatusController("/badRequest", HttpStatus.BAD_REQUEST);
     }
 }

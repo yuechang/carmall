@@ -6,9 +6,9 @@ package com.yc.carmall.controller;
 
 import com.yc.carmall.constants.BaseConstants;
 import com.yc.carmall.entity.UserEntity;
-import com.yc.carmall.interceptor.LanguageInterceptor;
 import com.yc.carmall.service.UserService;
 import com.yc.carmall.util.PasswordUtil;
+import com.yc.carmall.util.SystemPropertiesUtil;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -17,8 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import sun.reflect.annotation.ExceptionProxy;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -30,12 +30,13 @@ import java.util.List;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+    private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
 
-    private static Logger logger = LoggerFactory.getLogger(UserController.class);
-
+    @Autowired
+    private SystemPropertiesUtil systemPropertiesUtil;
 
     // 登录
     @RequestMapping(value = "/signin",method = RequestMethod.GET)
@@ -63,7 +64,7 @@ public class UserController {
 
     // 注册
     @RequestMapping(value = "/signup",method = RequestMethod.POST)
-    public String signup(String username, String password, String confirmPassword, ModelMap map) {
+    public String signup(String username, String password, ModelMap map, HttpServletRequest request) {
 
 
         int code = BaseConstants.SERVER_ERROR_CODE;
@@ -86,6 +87,18 @@ public class UserController {
             map.put(BaseConstants.DATA, data);
         }
         return "signupmessage";
+        /*
+        String result = "signupmessage";
+        String uri = request.getRequestURI();
+        List<String> langList = systemPropertiesUtil.getLangList();
+        for (String lang : langList) {
+            if (!uri.contains(lang)) {
+                continue;
+            }
+            result = lang.concat(File.separator).concat(result);
+            break;
+        }
+        return result;*/
     }
 
     // 注册

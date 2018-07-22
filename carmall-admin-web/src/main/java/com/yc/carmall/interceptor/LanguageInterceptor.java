@@ -73,7 +73,7 @@ public class LanguageInterceptor extends LocaleChangeInterceptor {
         //String lang = MapUtils.getString(map, BaseConstants.LANG_PARAMETER_NAME, "");
 
         String uri = request.getRequestURI();
-        if (StringUtils.isBlank(uri)) {
+        if (StringUtils.isBlank(uri) || "/".equals(uri)) {
             return super.preHandle(request, response, handler);
         }
 
