@@ -64,16 +64,6 @@ public class LanguageInterceptor extends LocaleChangeInterceptor {
 
     @Autowired
     private SystemPropertiesUtil systemPropertiesUtil;
-/*
-
-    @Value("${system.langSet}")
-    private Set<String> langSet;
-
-
-    @Value("${system.list}")
-    private List<String> langList;
-*/
-
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {

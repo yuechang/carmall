@@ -33,6 +33,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 
@@ -40,11 +42,11 @@ import org.springframework.web.servlet.i18n.CookieLocaleResolver;
  * @author Yue Chang
  * @version 1.0
  * @className: WebConfiguration
- * @description: @TODO
+ * @description: 拦截器配置
  * @date 2018年07月16日 10:35
  */
 @Configuration
-public class WebConfiguration extends WebMvcConfigurerAdapter {
+public class WebConfiguration implements WebMvcConfigurer {
 
     @Autowired
     private LanguageInterceptor languageInterceptor;
