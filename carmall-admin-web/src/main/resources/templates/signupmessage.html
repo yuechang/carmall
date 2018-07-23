@@ -35,21 +35,21 @@
             <h4 class="alert-heading" th:text="#{sign.up.success}"></h4>
 
             <hr>
-            <a class="mb-0" href="/user/signin" th:text="#{sign.in.title}"></a>
+            <a class="mb-0" th:href="${signInUrl}" th:text="#{sign.in.title}"></a>
         </div>
 
         <div th:case="500" class="alert alert-danger" role="alert">
             <h4 class="alert-heading" th:text="#{sign.up.failure}"></h4>
             <p th:text="${data}"></p>
             <hr>
-            <a class="mb-0" href="/user/signup" th:text="#{sign.up.title}"></a>
+            <a class="mb-0" th:href="${signUpUrl}" th:text="#{sign.up.title}"></a>
         </div>
 
         <div th:case="*" class="alert alert-danger" role="alert">
             <h4 class="alert-heading" th:text="#{sign.up.failure}"></h4>
             <p th:text="${data}"></p>
             <hr>
-            <a class="mb-0" href="/user/signup" th:text="#{sign.up.title}"></a>
+            <a class="mb-0" th:href="${signInUrl}" th:text="#{sign.up.title}"></a>
         </div>
     </div>
 

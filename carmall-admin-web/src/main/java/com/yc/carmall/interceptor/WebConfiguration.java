@@ -114,6 +114,7 @@ public class WebConfiguration implements WebMvcConfigurer {
          * 一般与ViewResolver结合使用
          */
         //registry.addViewController("/c").setViewName("a");
+
         Locale locale = LocaleContextHolder.getLocale();
         String country = locale.getCountry();
         String forwardPrefix = "forward:/";
@@ -128,11 +129,12 @@ public class WebConfiguration implements WebMvcConfigurer {
         registry.addViewController("/").setViewName(indexViewName);
 
         // 设置/cn和/en跳转地址
+        /*
         registry.addViewController("/".concat(LanguageEnum.ZH.getLang()))
                 .setViewName(forwardPrefix.concat(LanguageEnum.ZH.getLang()).concat("/").concat(viewName));
         registry.addViewController("/".concat(LanguageEnum.EN.getLang()))
                 .setViewName(forwardPrefix.concat(LanguageEnum.EN.getLang()).concat("/").concat(viewName));
-
+        */
         /**
          * 指定某个请求的状态码，而不返回任何的内容
          * 如下面将/badRequest请求返回状态码为400，而没有返回其它内容

@@ -46,8 +46,9 @@ public class UserController {
 
     // 登录
     @RequestMapping(value = "/signin",method = RequestMethod.GET)
-    public String signin(ModelMap map) {
+    public String signin(@PathVariable String lang, ModelMap map) {
         // return模板文件的名称，对应src/main/resources/templates/index.html
+        map.put(BaseConstants.LANG_PARAMETER_NAME, lang);
         return "signin";
     }
 
@@ -69,25 +70,25 @@ public class UserController {
         // return模板文件的名称，对应src/main/resources/templates/index.html
         // map.put("userInfo", userEntity);
         map.put("username", userEntity.getUsername());
-        return lang.concat("/index");
+        return "index";
     }
 
     // 注册
     @RequestMapping(value = "/signup",method = RequestMethod.GET)
-    public String signup() {
+    public String signup(@PathVariable String lang, ModelMap map) {
+
+        //String postUrl = lang.concat("/user/signup");
+        map.put(BaseConstants.LANG_PARAMETER_NAME, lang);
         return "signup";
     }
 
     // 注册
     @RequestMapping(value = "/signup",method = RequestMethod.POST)
-    public String signup(String username, String password, ModelMap map, HttpServletRequest request) {
-
+    public String signup(String username, String password, ModelMap map, @PathVariable String lang) {
 
         int code = BaseConstants.SERVER_ERROR_CODE;
         String data = "";
         try {
-
-
             UserEntity userEntity = new UserEntity();
             userEntity.setUsername(username);
             userEntity.setPassword(password);
@@ -99,8 +100,13 @@ public class UserController {
             data = e.getMessage();
             logger.info("注册失败。", e);
         } finally {
+            String signInUrl = "/".concat(lang).concat("/user/signin");
+            String signUpUrl = "/".concat(lang).concat("/user/signup");
+
             map.put(BaseConstants.CODE, code);
             map.put(BaseConstants.DATA, data);
+            map.put("signInUrl", signInUrl);
+            map.put("signUpUrl", signUpUrl);
         }
         return "signupmessage";
 

@@ -29,8 +29,9 @@
     <input type="hidden" th:value="#{sign.up.password.inconsistent}" id="passwordInconsistent">
     <input type="hidden" th:value="#{sign.up.password.not.be.empty}" id="passwordNotBeEmpty">
     <input type="hidden" th:value="#{sign.up.password.is.correct}" id="passwordCorrect">
+    <input type="hidden" th:value="${lang}" id="lang">
 
-    <form class="form-signin" action="/user/signup" method="post" id="signUpForm">
+    <form class="form-signin" method="post" id="signUpForm">
         <div class="text-center mb-4">
             <!--
             图标
@@ -120,8 +121,9 @@
             return result;
         }
 
+        var ajaxUrl = "/" + $("#lang").val() + "/user/checkusername";
         $.ajax({
-            url: "/user/checkusername",
+            url: ajaxUrl,
             data: { username: usernameValue },
             success: function (data){
 
@@ -232,7 +234,10 @@
         $("#inputPassword").val($.md5($("#inputPassword").val()));
         $("#confirmPassword").val($.md5($("#confirmPassword").val()));
 
-        $("#signUpForm").submit();
+        var actionValue = "/" + $("#lang").val() + "/user/signup";
+        var signUpFormVar = $("#signUpForm");
+        signUpFormVar.attr("action", actionValue);
+        signUpFormVar.submit();
     }
 </script>
 </body>

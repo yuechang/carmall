@@ -25,10 +25,11 @@
 <!-- Begin page content -->
 <main role="main" class="container">
     <input type="hidden" th:value="#{sign.in.username.or.password.incorrect}" id="usernameOrPasswordIncorrect">
+    <input type="hidden" th:value="${lang}" id="lang">
 
 
 
-    <form class="form-signin" action="/user/signin" method="post" id="signInForm">
+    <form class="form-signin"  method="post" id="signInForm">
         <div class="text-center mb-4" >
             <!--
             图标
@@ -109,12 +110,15 @@
         messageVar.html("<strong>&nbsp;&nbsp;</strong>&nbsp;&nbsp;");
     }
 
-
     function submitSingIn(){
 
         // md5密码加密
         $("#inputPassword").val($.md5($("#inputPassword").val()));
-        $("#signInForm").submit();
+
+        var actionValue = "/" + $("#lang").val() + "/user/signin";
+        var signInFormVar = $("#signInForm");
+        signInFormVar.attr("action", actionValue);
+        signInFormVar.submit();
     }
 
 </script>
