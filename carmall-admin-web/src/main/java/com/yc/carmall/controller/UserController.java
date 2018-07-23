@@ -14,12 +14,15 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * @author Yue Chang
@@ -28,15 +31,18 @@ import java.util.List;
  * @date 2018/7/14 17:03
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/{lang}/user")
 public class UserController {
     private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
 
+    //@Autowired
+    //private SystemPropertiesUtil systemPropertiesUtil;
+
     @Autowired
-    private SystemPropertiesUtil systemPropertiesUtil;
+    private MessageSource messageSource;
 
     // 登录
     @RequestMapping(value = "/signin",method = RequestMethod.GET)
@@ -47,13 +53,23 @@ public class UserController {
 
     // 登录
     @RequestMapping(value = "/signin",method = RequestMethod.POST)
-    public String signin(String username, String password, ModelMap map) {
+    public String signin(@PathVariable String lang, String username, String password, ModelMap map) {
 
         UserEntity userEntity = userService.login(username, password);
-        // return模板文件的名称，对应src/main/resources/templates/index.html
-        map.put("userInfo", userEntity);
+        if (null == userEntity) {
 
-        return "index";
+            Locale locale = LocaleContextHolder.getLocale();
+            String message = messageSource.getMessage("sign.in.username.or.password.incorrect",null,locale);
+            map.put(BaseConstants.CODE, BaseConstants.SUCCESS_CODE);
+            map.put(BaseConstants.DATA, message);
+
+            return lang.concat("/signin");
+        }
+
+        // return模板文件的名称，对应src/main/resources/templates/index.html
+        // map.put("userInfo", userEntity);
+        map.put("username", userEntity.getUsername());
+        return lang.concat("/index");
     }
 
     // 注册
@@ -87,18 +103,7 @@ public class UserController {
             map.put(BaseConstants.DATA, data);
         }
         return "signupmessage";
-        /*
-        String result = "signupmessage";
-        String uri = request.getRequestURI();
-        List<String> langList = systemPropertiesUtil.getLangList();
-        for (String lang : langList) {
-            if (!uri.contains(lang)) {
-                continue;
-            }
-            result = lang.concat(File.separator).concat(result);
-            break;
-        }
-        return result;*/
+
     }
 
     // 注册

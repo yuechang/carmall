@@ -40,6 +40,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2018年07月11日 11:17
  */
 @Controller
+@RequestMapping("/{lang}")
 public class CarController {
 
 

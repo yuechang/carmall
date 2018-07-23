@@ -24,32 +24,48 @@
 
 <!-- Begin page content -->
 <main role="main" class="container">
+    <input type="hidden" th:value="#{sign.in.username.or.password.incorrect}" id="usernameOrPasswordIncorrect">
 
-    <form class="form-signin" action="/user/signin" method="post">
-        <div class="text-center mb-4">
+
+
+    <form class="form-signin" action="/user/signin" method="post" id="signInForm">
+        <div class="text-center mb-4" >
             <!--
             图标
             <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
             -->
             <h1 class="h3 mb-3 font-weight-normal" th:text="#{sign.in.title}"></h1>
 
-            <div th:if="${message}" id="message" class="alert alert-warning">
+            <div th:if="${data}" id="message" class="alert alert-warning">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong th:if="${message}" th:text="${message}"></strong>
+                <strong th:if="${data}" th:text="${data}"></strong>
             </div>
 
-            <div th:unless="${message}" id="empty" class="alert" >
+            <div th:unless="${data}" id="empty" class="alert" >
                 <strong>&nbsp;&nbsp;</strong>&nbsp;&nbsp;
             </div>
+
         </div>
 
         <div class="form-label-group">
-            <input type="email" id="inputEmail" name="username" class="form-control" th:placeholder="#{sign.in.username}" required autofocus>
+            <input type="text"
+                   id="inputEmail"
+                   name="username"
+                   class="form-control"
+                   th:placeholder="#{sign.in.username}"
+                   onfocus="clearMessage()"
+                   required>
             <label for="inputEmail" th:text="#{sign.in.username}"></label>
         </div>
 
         <div class="form-label-group">
-            <input type="password" id="inputPassword" name="password" class="form-control" th:placeholder="#{sign.in.password}" required>
+            <input type="password"
+                   id="inputPassword"
+                   name="password"
+                   class="form-control"
+                   th:placeholder="#{sign.in.password}"
+                   onfocus="clearMessage()"
+                   required>
             <label for="inputPassword" th:text="#{sign.in.password}"></label>
         </div>
 
@@ -58,7 +74,10 @@
                 <input type="checkbox" value="rememberMe" th:text="#{sign.in.remember.me}">
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{sign.in.title}"></button>
+        <button class="btn btn-lg btn-primary btn-block"
+                type="button"
+                onclick="submitSingIn()"
+                th:text="#{sign.in.title}"></button>
     </form>
 
 </main>
@@ -72,10 +91,32 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <script src="/js/jquery-3.3.1.slim.min.js" ></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery.md5.js"></script>
 <!--<script src="/js/popper.min.js" ></script>-->
 <script src="/js/tether.min.js" ></script>
 <script src="/js/bootstrap.min.js" ></script>
+
+
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+
+    function clearMessage() {
+        var messageVar = $("#message");
+        messageVar.removeClass("alert-warning");
+        messageVar.html("<strong>&nbsp;&nbsp;</strong>&nbsp;&nbsp;");
+    }
+
+
+    function submitSingIn(){
+
+        // md5密码加密
+        $("#inputPassword").val($.md5($("#inputPassword").val()));
+        $("#signInForm").submit();
+    }
+
+</script>
 </body>
 </html>

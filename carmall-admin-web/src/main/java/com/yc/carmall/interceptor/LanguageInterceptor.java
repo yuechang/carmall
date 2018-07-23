@@ -26,6 +26,7 @@
 package com.yc.carmall.interceptor;
 
 import com.yc.carmall.constants.BaseConstants;
+import com.yc.carmall.enums.LanguageEnum;
 import com.yc.carmall.util.SystemPropertiesUtil;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -69,9 +70,13 @@ public class LanguageInterceptor extends LocaleChangeInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
 
         //获取@pathvariable的参数/{lang}
-        //Map map = (Map)request.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
-        //String lang = MapUtils.getString(map, BaseConstants.LANG_PARAMETER_NAME, "");
-
+        /*
+        Map map = (Map)request.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+        String lang = MapUtils.getString(map, BaseConstants.LANG_PARAMETER_NAME, LanguageEnum.ZH.getLang());
+        Locale locale = new Locale(lang);
+        localeResolver.setLocale(request, response, locale);
+        */
+        /*
         String uri = request.getRequestURI();
         if (StringUtils.isBlank(uri) || "/".equals(uri)) {
             return super.preHandle(request, response, handler);
@@ -86,13 +91,17 @@ public class LanguageInterceptor extends LocaleChangeInterceptor {
             Locale locale = new Locale(lang);
             localeResolver.setLocale(request, response, locale);
 
+
             int index = uri.indexOf("/", 1);
+            if (index < 0) {
+                continue;
+            }
             String targetUri = uri.substring(index);
             request.setAttribute("isForward", "yes");
             logger.info("请求转发,uri:{},targetUri: {}", uri, targetUri);
 
-            // 请求重定向，使用forward方式将请求重定向
             try {
+                // 请求重定向，使用forward方式将请求重定向
                 request.getRequestDispatcher(targetUri).forward(request, response);
                 // 没有return将会报错：Caused by: java.lang.IllegalStateException: Cannot forward after response has been committed
                 return false;
@@ -100,6 +109,7 @@ public class LanguageInterceptor extends LocaleChangeInterceptor {
                 logger.info("设置本地语言信息与URL转发异常", e);
             }
         }
+        */
         return super.preHandle(request, response, handler);
     }
 }

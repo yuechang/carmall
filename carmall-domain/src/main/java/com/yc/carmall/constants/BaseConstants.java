@@ -15,6 +15,8 @@ public class BaseConstants {
     private BaseConstants(){}
     public static final int COOKIE_MAX_AGE = 3600;
     public static final String COOKIE_NAME = "language";
+    public static final String LANG_PARAMETER_NAME = "lang";
+
 
     public static final String DATA = "data";
     public static final String CODE = "code";
