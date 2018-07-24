@@ -63,27 +63,6 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(languageInterceptor);
     }
-/*
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-
-        Locale locale = LocaleContextHolder.getLocale();
-        String language = locale.getLanguage();
-        String country = locale.getCountry();
-        System.out.println(language + "," + country);
-        String vimeName = "index";
-        if (Locale.CHINA.getCountry().equals(country) || Locale.CHINESE.getCountry().equals(country)) {
-            vimeName = LanguageEnum.ZH
-        } else {
-
-        }
-        registry.addViewController("/").setViewName("forward:/cn/user/signup");
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-        this.addViewControllers(registry);
-    }
-*/
-
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -91,22 +70,15 @@ public class WebConfiguration implements WebMvcConfigurer {
          * 配置路径跳转；将某个路径的请求映射到另外一个路径
          * 如将所有http://localhost/b/**的请求全部跳转到http://localhost/test上去
          */
-        //registry.addRedirectViewController("/cn/**", "/**");
-        //registry.addRedirectViewController("/en/**", "/**");
-/*
-
         Locale locale = LocaleContextHolder.getLocale();
-        String language = locale.getLanguage();
         String country = locale.getCountry();
-        System.out.println(language + "," + country);
-        String redirecUrl = "";
+        String viewName = "/global/home";
         if (Locale.CHINA.getCountry().equals(country) || Locale.CHINESE.getCountry().equals(country)) {
-            redirecUrl = "/".concat(LanguageEnum.ZH.getLang()).concat("/**");
+            viewName = "/".concat(LanguageEnum.ZH.getLang()).concat(viewName);
         } else {
-            redirecUrl = "/".concat(LanguageEnum.EN.getLang()).concat("/**");
+            viewName = "/".concat(LanguageEnum.EN.getLang()).concat(viewName);
         }
-        registry.addRedirectViewController("/**", redirecUrl);
-
+        registry.addRedirectViewController("/", viewName);
 
         /**
          * 将路径映射到某个名称为指定值的视图上
@@ -115,26 +87,6 @@ public class WebConfiguration implements WebMvcConfigurer {
          */
         //registry.addViewController("/c").setViewName("a");
 
-        Locale locale = LocaleContextHolder.getLocale();
-        String country = locale.getCountry();
-        String forwardPrefix = "forward:/";
-        String viewName = "index";
-        String indexViewName = "";
-
-        if (Locale.CHINA.getCountry().equals(country) || Locale.CHINESE.getCountry().equals(country)) {
-            indexViewName = forwardPrefix.concat(LanguageEnum.ZH.getLang()).concat("/").concat(viewName);
-        } else {
-            indexViewName = forwardPrefix.concat(LanguageEnum.EN.getLang()).concat("/").concat(viewName);
-        }
-        registry.addViewController("/").setViewName(indexViewName);
-
-        // 设置/cn和/en跳转地址
-        /*
-        registry.addViewController("/".concat(LanguageEnum.ZH.getLang()))
-                .setViewName(forwardPrefix.concat(LanguageEnum.ZH.getLang()).concat("/").concat(viewName));
-        registry.addViewController("/".concat(LanguageEnum.EN.getLang()))
-                .setViewName(forwardPrefix.concat(LanguageEnum.EN.getLang()).concat("/").concat(viewName));
-        */
         /**
          * 指定某个请求的状态码，而不返回任何的内容
          * 如下面将/badRequest请求返回状态码为400，而没有返回其它内容

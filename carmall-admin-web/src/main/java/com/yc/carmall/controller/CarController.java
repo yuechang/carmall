@@ -73,7 +73,7 @@ public class CarController {
         return "修改成功";
     }
 
-    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    @RequestMapping(value = "/global/home",method = RequestMethod.GET)
     public String index(ModelMap map) {
         // 加入一个属性，用来在模板中读取
         map.addAttribute("host", "https://yuech.net");

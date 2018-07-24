@@ -58,13 +58,10 @@ import java.util.Set;
 @Component
 public class LanguageInterceptor extends LocaleChangeInterceptor {
 
-    private static Logger logger = LoggerFactory.getLogger(LanguageInterceptor.class);
+    //private static Logger logger = LoggerFactory.getLogger(LanguageInterceptor.class);
 
     @Autowired
     private LocaleResolver localeResolver;
-
-    @Autowired
-    private SystemPropertiesUtil systemPropertiesUtil;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
