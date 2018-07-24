@@ -34,20 +34,20 @@ import java.util.List;
  * @author Yue Chang
  * @version 1.0
  * @className: SystemPropertiesUtil
- * @description: @TODO
+ * @description: 配置信息工具类
  * @date 2018年07月17日 11:24
  */
 @Component
 @ConfigurationProperties(prefix = "system")
 public class SystemPropertiesUtil {
 
-    private List<String> langList;
+    private String temp;
 
-    public List<String> getLangList() {
-        return langList;
+    public String getTemp() {
+        return temp;
     }
 
-    public void setLangList(List<String> langList) {
-        this.langList = langList;
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 }

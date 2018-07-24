@@ -32,8 +32,5 @@ spring:
     basename: i18n/messages
     encoding: UTF-8
 system:
-  #angSet: [en,en_US,zh,zh_CN]
-  langList:
-    - en
-    - cn
+  temp: temp
 
