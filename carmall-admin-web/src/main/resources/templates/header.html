@@ -3,26 +3,44 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 <div th:fragment="navbar">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
         <a class="navbar-brand" href="#">Yuech</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+
+                    <div th:if="${username}">
+                        <a class="nav-link dropdown-toggle"
+                           href="http://example.com"
+                           id="userInfoLink"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           th:text="${username}">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userInfoLink">
+                            <a class="dropdown-item" th:text="#{user.profile}" href="javascript:getUserInfo()"></a>
+                            <a class="dropdown-item" th:text="#{user.logout}" href="javascript:logout()"></a>
+                        </div>
+                    </div>
+                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle"
                        href="http://example.com"
-                       id="navbarDropdownMenuLink"
+                       id="switchLangLink"
                        data-toggle="dropdown"
                        aria-haspopup="true"
                        aria-expanded="false"
-                       th:text="#{home.lang}"
-                    >
-
+                       th:text="#{home.lang}">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="switchLangLink">
                         <a class="dropdown-item" href="javascript:changeLanguage('en')">EN</a>
                         <a class="dropdown-item" href="javascript:changeLanguage('cn')">简</a>
                     </div>
@@ -41,6 +59,14 @@
                 var p =url.replace(regex,"/"+newLanguage+"/");
                 window.location.href = p;
             }
+        }
+
+        function getUserInfo() {
+
+        }
+
+        function logout() {
+
         }
     </script>
 </div>
