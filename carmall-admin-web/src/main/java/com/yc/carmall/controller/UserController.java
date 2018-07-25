@@ -7,6 +7,7 @@ package com.yc.carmall.controller;
 import com.yc.carmall.constants.BaseConstants;
 import com.yc.carmall.entity.UserEntity;
 import com.yc.carmall.service.UserService;
+import com.yc.carmall.util.IPUtil;
 import com.yc.carmall.util.PasswordUtil;
 import com.yc.carmall.util.SystemPropertiesUtil;
 import org.apache.commons.collections4.CollectionUtils;
@@ -21,6 +22,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -37,9 +39,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
-    //@Autowired
-    //private SystemPropertiesUtil systemPropertiesUtil;
 
     @Autowired
     private MessageSource messageSource;
@@ -93,6 +92,11 @@ public class UserController {
             userEntity.setUsername(username);
             userEntity.setPassword(password);
             userEntity.setSalt(PasswordUtil.generate(password));
+            userEntity.setRegIp(IPUtil.getRemoteHost());
+            Date currentDate = new Date();
+            userEntity.setRegTime(currentDate);
+            userEntity.setCreateBy(BaseConstants.SYSTEM_ADMIN);
+            userEntity.setCreateTime(currentDate.getTime());
 
             userService.addUserEntity(userEntity);
             code = BaseConstants.SUCCESS_CODE;

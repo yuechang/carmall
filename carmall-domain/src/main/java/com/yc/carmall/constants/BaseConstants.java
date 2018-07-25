@@ -24,5 +24,7 @@ public class BaseConstants {
     public static final int SUCCESS_CODE = 200;
     public static final int SERVER_ERROR_CODE = 500;
 
+    public static final String SYSTEM_ADMIN = "SYSTEM_ADMIN";
+
 }
 

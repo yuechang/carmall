@@ -28,6 +28,7 @@ package com.yc.carmall.service.impl;
 import com.yc.carmall.entity.UserEntity;
 import com.yc.carmall.repository.UserRepository;
 import com.yc.carmall.service.UserService;
+import com.yc.carmall.util.IPUtil;
 import com.yc.carmall.util.PasswordUtil;
 import com.yc.carmall.util.UpdateUtil;
 import org.apache.commons.collections4.CollectionUtils;
@@ -38,6 +39,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -58,21 +60,30 @@ public class UserServiceImpl implements UserService {
     public UserEntity login(String username, String password) {
 
         List<UserEntity> userEntityList = userRepository.login(username, password);
-        if (CollectionUtils.isEmpty(userEntityList))
+        if (CollectionUtils.isEmpty(userEntityList)) {
             return null;
+        }
 
         // 返回第一个用户对象
         UserEntity userEntity = userEntityList.get(0);
+        if (null == userEntity) {
+            return null;
+        }
 
+        //userRepository.save()
         String salt = userEntity.getSalt();
         if (StringUtils.isBlank(salt)) {
             salt = PasswordUtil.generate(password);
-            userRepository.updateSaltById(salt,userEntity.getId());
-            return userEntity;
+            //userRepository.updateSaltById(salt,userEntity.getId());
+            userEntity.setSalt(salt);
+            //return userEntity;
         }
         // 验证用户密码加盐信息
         boolean flag = PasswordUtil.verify(password, salt);
         if (flag) {
+            userEntity.setLastLoginIp(IPUtil.getRemoteHost());
+            userEntity.setLastLoginTime(new Date());
+            userRepository.save(userEntity);
             return userEntity;
         }
         return null;
