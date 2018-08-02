@@ -31,6 +31,19 @@ spring:
   messages:
     basename: i18n/messages
     encoding: UTF-8
+  redis:
+    host: serverhost
+    port: 6379
+    password: yuechang
+    database: 5
+    jedis:
+      pool:
+        max-active: 3000
+        max-wait: -1
+        min-idle: 0
+        max-idle: 3000
+
+
 system:
   temp: temp
 
