@@ -51,4 +51,7 @@ public interface CarService {
     CarEntity updateStatus(String id, int status);
 
     List<CarEntity> findAllCarSource();
+
+    void testRedis();
+
 }

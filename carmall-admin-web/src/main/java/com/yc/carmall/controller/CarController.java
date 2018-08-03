@@ -55,6 +55,14 @@ public class CarController {
     }
 
 
+    @RequestMapping("/testRedis")
+    @ResponseBody
+    public String testRedis() {
+
+        carEntityZhService.testRedis();
+        return "hello world!~";
+    }
+
 
     @RequestMapping(value = "/addCarEntity", method = RequestMethod.POST)
     @ResponseBody
