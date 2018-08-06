@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" >
     <link rel="stylesheet" href="/css/dashboard.css" >
 
-    <title th:text="#{sign.in.title}"></title>
+    <title th:text="#{index.title}"></title>
 </head>
 <body>
 
@@ -27,63 +27,72 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                <h1 >Hi</h1>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                        <thead>
+                            <tr>
+                                <th th:text="#{car.info.carName}"></th>
+                                <th th:text="#{car.info.phone}"></th>
+                                <th th:text="#{car.info.make}"></th>
+                                <th th:text="#{car.info.price}"></th>
+                                <th th:text="#{car.info.pictureUrl}"></th>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                                <th th:text="#{car.info.mileage}"></th>
+                                <th th:text="#{car.info.colour}"></th>
+                                <th th:text="#{car.info.transmission}"></th>
+                                <th th:text="#{car.info.fuelType}"></th>
+                                <th th:text="#{car.info.bodyStyle}"></th>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                                <th th:text="#{car.info.engineSize}"></th>
+                                <th th:text="#{car.info.vehicleLocation}"></th>
+                                <th th:text="#{car.info.vehicleDescription}"></th>
+                                <th th:text="#{car.info.vehicleOptions}"></th>
+                                <th th:text="#{car.info.status}"></th>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                                <th>状态变量：index</th>
+                                <th>状态变量：count</th>
+                                <th>状态变量：size</th>
+                                <th>状态变量：even</th>
+                                <th>状态变量：odd</th>
+                                <th>状态变量：first</th>
+                                <th>状态变量：last</th>
+                            </tr>
+                        </thead>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                        <tbody>
+                            <tr  th:each="car,carStat : ${carList}">
+                                <td th:text="${user.carName}"></td>
+                                <td th:text="${user.phone}"></td>
+                                <td th:text="${user.make}"></td>
+                                <td th:text="${user.price}"></td>
+                                <td th:text="${user.pictureUrl}"></td>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                                <td th:text="${user.mileage}"></td>
+                                <td th:text="${user.colour}"></td>
+                                <td th:text="${user.transmission}"></td>
+                                <td th:text="${user.fuelType}"></td>
+                                <td th:text="${user.bodyStyle}"></td>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
+                                <td th:text="${user.engineSize}"></td>
+                                <td th:text="${user.vehicleLocation}"></td>
+                                <td th:text="${user.vehicleDescription}"></td>
+                                <td th:text="${user.vehicleOptions}"></td>
+                                <td th:text="${user.status}"></td>
 
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
-                <h1>Hi</h1>
 
+                                <th th:text="${carStat.index}">状态变量：index</th>
+                                <th th:text="${carStat.count}">状态变量：count</th>
+                                <th th:text="${carStat.size}">状态变量：size</th>
+                                <th th:text="${carStat.even}">状态变量：even****</th>
+                                <th th:text="${carStat.odd}">状态变量：odd</th>
+                                <th th:text="${carStat.first}">状态变量：first</th>
+                                <th th:text="${carStat.last}">状态变量：last</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </div>
     </div>
@@ -100,7 +109,7 @@
     <script src="/js/bootstrap.min.js" ></script>
 
     <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script src="/js/feather-icons/dist/feather.min.js"></script>
     <script>
         feather.replace()
     </script>
