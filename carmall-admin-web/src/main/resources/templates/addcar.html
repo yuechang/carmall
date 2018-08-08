@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="zh">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="/css/dashboard.css" >
+
+    <title th:text="#{car.add.info.title}"></title>
+</head>
+<body>
+
+    <header>
+        <!-- Fixed navbar -->
+        <div th:include="commonFragment :: topNavbar">
+        </div>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:include="commonFragment :: leftNavbar"></div>
+
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+
+                <h1 th:text="#{car.add.info.title}"></h1>
+                <hr class="mb-4">
+                <form >
+                    <div class="mb-3">
+                        <label for="carName" th:text="#{car.info.carName}"></label>
+                        <input type="text" class="form-control" id="carName" name="carName" placeholder="">
+                        <div class="invalid-feedback">
+                            Please enter a valid car name.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="phone" th:text="#{car.info.phone}"></label>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                phone is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="country" th:text="#{car.info.make}"></label>
+                            <select class="custom-select d-block w-100" id="country" required>
+                                <option value="">Choose...</option>
+                                <option>United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="transmission" th:text="#{car.info.transmission}"></label>
+                            <select class="custom-select d-block w-100" id="transmission" required>
+                                <option th:text="#{choose.title}"></option>
+                                <option th:text="#{car.info.transmission.manual}"></option>
+                                <option th:text="#{car.info.transmission.automatic}"></option>
+                                <option th:text="#{car.info.transmission.semi_auto}"></option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid transmission.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="price" th:text="#{car.info.price}"></label>
+                            <input type="text" class="form-control" id="price" name="price" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                price is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label for="mileage" th:text="#{car.info.mileage}"></label>
+                            <input type="text" class="form-control" id="mileage" name="mileage" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                mileage is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label for="colour" th:text="#{car.info.colour}"></label>
+                            <input type="text" class="form-control" id="colour" name="colour" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                price is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="fuelType" th:text="#{car.info.fuelType}"></label>
+                            <input type="text" class="form-control" id="fuelType" name="fuelType" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                fuelType is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label for="bodyStyle" th:text="#{car.info.bodyStyle}"></label>
+                            <input type="text" class="form-control" id="bodyStyle" name="bodyStyle" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                bodyStyle is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+
+                            <label for="engineSize" th:text="#{car.info.engineSize}"></label>
+                            <input type="text" class="form-control" id="engineSize" name="engineSize" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                engineSize is required.
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="vehicleDescription" th:text="#{car.info.vehicleDescription}"></label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="vehicleDescription" aria-label="" name="vehicleDescription"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pictureUrl" th:text="#{car.info.pictureUrl}"></label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" multiple class="custom-file-input" id="pictureUrl"  aria-describedby="inputGroupFileAddon04">
+                                <label class="custom-file-label" for="pictureUrl" th:text="#{choose.file.title}"></label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </form>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="/js/jquery-3.3.1.slim.min.js" ></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery.md5.js"></script>
+    <!--<script src="/js/popper.min.js" ></script>-->
+    <script src="/js/tether.min.js" ></script>
+    <script src="/js/bootstrap.min.js" ></script>
+
+    <!-- Icons -->
+    <script src="/js/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
