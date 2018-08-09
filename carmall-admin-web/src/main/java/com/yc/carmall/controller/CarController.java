@@ -28,9 +28,14 @@ package com.yc.carmall.controller;
 import com.yc.carmall.entity.CarEntity;
 import com.yc.carmall.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Locale;
 
 /**
  * @author Yue Chang
@@ -45,7 +50,10 @@ public class CarController {
 
 
     @Autowired
-    private CarService carEntityZhService;
+    private CarService carService;
+
+    @Autowired
+    private MessageSource messageSource;
 
 
     @RequestMapping("/helloWorld")
@@ -59,17 +67,21 @@ public class CarController {
     @ResponseBody
     public String testRedis() {
 
-        carEntityZhService.testRedis();
+        carService.testRedis();
         return "hello world!~";
     }
 
+    @RequestMapping(value = "/addCarEntity", method = RequestMethod.GET)
+    public String addCarEntity() {
+        return "addcar";
+    }
 
     @RequestMapping(value = "/addCarEntity", method = RequestMethod.POST)
     @ResponseBody
     public String addCarEntity(CarEntity carEntity) {
 
         carEntity.setCreateTime(System.currentTimeMillis());
-        carEntity = carEntityZhService.addCarSource(carEntity);
+        carEntity = carService.addCarSource(carEntity);
         return carEntity.toString();
     }
 
@@ -77,15 +89,20 @@ public class CarController {
     @ResponseBody
     public String updateCarEntityStatus(@RequestParam(required = true) String id, @RequestParam(required = true) int status) {
 
-        carEntityZhService.updateStatus(id, status);
-        return "修改成功";
+        CarEntity carEntity = carService.updateStatus(id, status);
+
+        Locale locale = LocaleContextHolder.getLocale();
+        String message = messageSource.getMessage("car.info.update.success",null,locale);
+        return message;
     }
 
     @RequestMapping(value = "/global/home",method = RequestMethod.GET)
     public String index(ModelMap map) {
-        // 加入一个属性，用来在模板中读取
-        map.addAttribute("host", "https://yuech.net");
-        // return模板文件的名称，对应src/main/resources/templates/index.html
+        List<CarEntity> carList = carService.findAllCarSource();
+
+        map.put("carList", carList);
         return "index";
     }
+
+
 }

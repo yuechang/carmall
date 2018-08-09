@@ -28,7 +28,7 @@ package com.yc.carmall.util;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * @author Yue Chang
@@ -43,11 +43,21 @@ public class SystemPropertiesUtil {
 
     private String temp;
 
+    private Map<String, String> ftpMap;
+
     public String getTemp() {
         return temp;
     }
 
     public void setTemp(String temp) {
         this.temp = temp;
+    }
+
+    public Map<String, String> getFtpMap() {
+        return ftpMap;
+    }
+
+    public void setFtpMap(Map<String, String> ftpMap) {
+        this.ftpMap = ftpMap;
     }
 }

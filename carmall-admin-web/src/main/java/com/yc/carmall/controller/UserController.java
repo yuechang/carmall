@@ -65,9 +65,6 @@ public class UserController {
 
             return lang.concat("/signin");
         }
-
-        // return模板文件的名称，对应src/main/resources/templates/index.html
-        // map.put("userInfo", userEntity);
         map.put("username", userEntity.getUsername());
         return "index";
     }
@@ -75,8 +72,6 @@ public class UserController {
     // 注册
     @RequestMapping(value = "/signup",method = RequestMethod.GET)
     public String signup(@PathVariable String lang, ModelMap map) {
-
-        //String postUrl = lang.concat("/user/signup");
         map.put(BaseConstants.LANG_PARAMETER_NAME, lang);
         return "signup";
     }

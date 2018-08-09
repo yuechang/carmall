@@ -26,7 +26,7 @@ spring:
     encoding: UTF-8
     servlet:
       content-type: text/html
-    # 开发是关闭缓存，不热没法看到实时页面
+    # 开发时关闭缓存，不热没法看到实时页面
     cache: false
   messages:
     basename: i18n/messages
@@ -46,4 +46,9 @@ spring:
 
 system:
   temp: temp
-
+  ftpMap:
+    hostname: serverhost
+    username: kevin
+    password: yuechang
+    port: 21
+    uploadPath: /home/kevin/upload
