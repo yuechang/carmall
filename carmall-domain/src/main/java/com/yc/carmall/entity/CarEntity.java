@@ -104,7 +104,7 @@ public class CarEntity extends BaseEntity {
     @ApiModelProperty(value = "车源状态", example = "1")
     private Integer status;
 
-    @ApiModelProperty(value = "车源信息语言", example = "zh/en")
+    @ApiModelProperty(value = "车源信息语言", example = "cn/en")
     private String lang;
 
 
