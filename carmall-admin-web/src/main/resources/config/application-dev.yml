@@ -52,3 +52,6 @@ system:
     password: yuechang
     port: 21
     uploadPath: /home/kevin/upload
+    suffix: gif,jpeg,jpg,png,bmp
+    # maxSize: 1024*1024
+    maxSize: 1048576
